@@ -1,0 +1,16 @@
+name: 02 - Workflow Events
+
+on:
+    push:
+    schedule:
+        - cron: '*/5 * * * *'    # every day at midnight
+jobs:
+  hello-trigger:  
+    runs-on: ubuntu-latest
+    steps:
+    - name: Show the trigger
+      run: | 
+        echo "'Hello World'"
+        echo "${{ github.event_name }}"
+
+
