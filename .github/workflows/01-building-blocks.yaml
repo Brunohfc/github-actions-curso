@@ -2,8 +2,8 @@ name: 01-building-blocks.yaml
 
 on:
     push:
-        branches:
-            - master
+        # branches:
+        #     - master
     workflow_dispatch:
 
 jobs:
