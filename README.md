@@ -1,4 +1,4 @@
 # github-actions-curso
 Aperfeiçoamento em esteira de CI/CD
 
-exervicio pratico 05
+exercicio pratico 05
