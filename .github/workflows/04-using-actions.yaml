@@ -1,7 +1,7 @@
 name: 04 Using Actions
 
 on:
-    push:
+    workflow_dispatch: {}
 
 jobs:
   build:
@@ -18,7 +18,6 @@ jobs:
           node-version: '20.x'
       - name: Install dependencies
         run: npm ci
-      - name: Run unit tests 
-        run: npm test
-    #   - name: Build project
-    #     run: npm run build
+    #   - name: Run unit tests 
+    #     run: npm test
+    # my-app doesn't have a test
