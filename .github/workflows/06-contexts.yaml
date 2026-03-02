@@ -19,4 +19,4 @@ jobs:
 
         - name: Retrieve variables
           run: |
-            echo "Value from env var: ${{ env.MY_VAR }}"
+            echo "Value from env var: ${{ vars.MY_VAR }}"
