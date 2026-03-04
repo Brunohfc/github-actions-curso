@@ -1,7 +1,8 @@
 name: 07-expressions.yaml
+run-name: 07 - Expressions
 
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs: 
             debug: 
