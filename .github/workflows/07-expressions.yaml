@@ -20,10 +20,10 @@ jobs:
             echo "Commit SHA: ${{github.sha}}"
             echo "Runner OS ${{ runner.os }}"
         
-        - name: "[debug] Print when triggered from main"
-          if: ${{inputs.debug == true && github.ref_name == 'main'}}
+        - name: "[debug] Print when triggered from master"
+          if: ${{inputs.debug == true && github.ref_name == 'master'}}
           run: |
-            echo "This workflow was triggered from the main branch."
+            echo "This workflow was triggered from the master branch."
         
         - name: "Hello"
           run: echo "Hello, World!"
