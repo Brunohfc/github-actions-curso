@@ -16,6 +16,10 @@ jobs:
             build-status: ${{ steps.build.outputs.status }}
 
         steps:
+            - name: Check build status
+              if: ${{inputs.build-status == 'failure'}}
+              run: echo Build failed && exit 1
+
             - name: Print GITHUB_OUTPUT path
               run: echo $GITHUB_OUTPUT
 
