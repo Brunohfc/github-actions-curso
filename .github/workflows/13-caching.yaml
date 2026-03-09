@@ -34,7 +34,15 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: ${{inputs.node-version}}
-        
+
+        - name: Cache node modules
+          uses: actions/cache@v3
+          if: ${{ inputs.cache }}
+          id: cache-node-modules
+          with:
+            path: 13-caching/react-app/node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('13-caching/react-app/package-lock.json') }}
+
         - name: Install dependencies
           run: npm ci
 
