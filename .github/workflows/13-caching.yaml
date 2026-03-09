@@ -44,6 +44,7 @@ jobs:
             key: ${{ runner.os }}-node-${{ hashFiles('13-caching/react-app/package-lock.json') }}
 
         - name: Install dependencies
+          if: ${{steps}}
           run: npm ci
 
         - name: Test application
